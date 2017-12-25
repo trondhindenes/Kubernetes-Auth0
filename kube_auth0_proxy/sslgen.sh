@@ -1,0 +1,1 @@
+openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=auth0proxy" -keyout auth0proxy.key -out auth0proxy.cert
