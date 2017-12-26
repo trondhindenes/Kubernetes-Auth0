@@ -20,6 +20,8 @@ Then, figure out the port by running:
 As you can see, mine is running on port 32170 on my single Kubernetes host:
 ![screenshot from 2017-12-25 20-34-16](https://user-images.githubusercontent.com/1747120/34342527-1e50ec6e-e9b3-11e7-92f1-68f1819b871f.png)
 
+At this point you need to go back to your Auth0 client settings and add the url to the list of allowed callback urls (in addition to the existing `openidconnect.net`. Make sure you add `https://<kubernetes_worker_ip>:<service_port>/`.)
+
 Now we can edit the `02_deployment.yml` file in the same folder. Change the value of `thiscontainerurl` so that it points to: `https://<kubernetes_worker_ip>:<service_port>/` - again, remember the trailing slash. (The auth0 proxy needs to know "its own" url, so in a real-world scenario this wold probably be a url and not just an ip address). Also replace the values for the following environment variables in the same file:   
 `auth0clientid`   
 `auth0clientsecret`   
