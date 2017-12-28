@@ -13,7 +13,7 @@ def execute(cmd):
 config = '''
 <VirtualHost *:443>
         #OIDCProviderIssuer https://<<auth0domain>>
-        OIDCProviderMetadataURL https://trondhindenes.eu.auth0.com/.well-known/openid-configuration
+        OIDCProviderMetadataURL https://<<auth0domain>>/.well-known/openid-configuration
         #OIDCProviderAuthorizationEndpoint https://<<auth0domain>>/authorize
         #OIDCProviderTokenEndpoint https://<<auth0domain>>/oauth/token
         #OIDCProviderTokenEndpointAuth client_secret_post
