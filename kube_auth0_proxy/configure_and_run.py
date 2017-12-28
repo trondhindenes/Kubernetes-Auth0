@@ -11,7 +11,7 @@ def execute(cmd):
         print(str(line))
 
 config = '''
-<VirtualHost *:443 *:80>
+<VirtualHost *:443>
         #OIDCProviderIssuer https://<<auth0domain>>
         OIDCProviderMetadataURL https://<<auth0domain>>/.well-known/openid-configuration
         #OIDCProviderAuthorizationEndpoint https://<<auth0domain>>/authorize
